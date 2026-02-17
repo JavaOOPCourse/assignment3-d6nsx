@@ -1,23 +1,27 @@
-public class ConsultationService extends Service
-        implements Billable {
+public class ConsultationService extends Service implements Billable {
 
-    // TODO: constructor
+    private int sessionsUsed;
 
+    public ConsultationService(String serviceName, int serviceId) {
+        super(serviceName, serviceId);
+        this.sessionsUsed = 3; // example sessions
+    }
 
     @Override
     public void performService() {
+        if (!isActive()) {
+            System.out.println(getServiceName() + " is not active.");
+            return;
+        }
 
-        // TODO:
-        // check active
-        // print consultation message
-
+        System.out.println("Booking an online consultation session.");
+        sessionsUsed++;
     }
 
     @Override
     public void generateBill() {
-
-        // TODO:
-        // print billing message
-
+        double costPerSession = 30.0;
+        double total = sessionsUsed * costPerSession;
+        System.out.println("Consultation bill: $" + total);
     }
 }
