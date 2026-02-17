@@ -1,19 +1,15 @@
 public class Main {
     public static void main(String[] args) {
 
-        // Create Users
         User admin = new Admin("Alice", 1);
         User customer = new Customer("Bob", 2);
 
-        // Create Services
         Service streaming = new StreamingService("StreamPlus", 101);
         Service cloud = new CloudStorageService("CloudBox", 102);
         Service consultation = new ConsultationService("MediTalk", 103);
 
-        // Store services
         Service[] services = {streaming, cloud, consultation};
 
-        // Activate services
         for (Service s : services) {
             s.activateService();
         }

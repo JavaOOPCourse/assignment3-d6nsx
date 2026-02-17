@@ -1,4 +1,4 @@
-public abstract class User {
+public abstract clagitss User {
 
     protected String name;
     protected int id;

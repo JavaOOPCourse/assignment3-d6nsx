@@ -4,7 +4,7 @@ public class ConsultationService extends Service implements Billable {
 
     public ConsultationService(String serviceName, int serviceId) {
         super(serviceName, serviceId);
-        this.sessionsUsed = 3; // example sessions
+        this.sessionsUsed = 3;
     }
 
     @Override

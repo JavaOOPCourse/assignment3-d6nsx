@@ -1,12 +1,12 @@
 public class CloudStorageService extends Service implements PremiumFeature, Billable {
 
     private boolean isPremium;
-    private int storageUsed; // in GB
+    private int storageUsed;
 
     public CloudStorageService(String serviceName, int serviceId) {
         super(serviceName, serviceId);
         this.isPremium = false;
-        this.storageUsed = 50; // example usage
+        this.storageUsed = 50;
     }
 
     @Override
